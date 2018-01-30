@@ -7,8 +7,9 @@ before_install:
   - go get -t -v ./...
 script:
   - go test -v -race -coverprofile=add_coverage.txt -covermode=count ./add/
+  - go tool cover -func=add_coverage.txt
   - go test -v -race -coverprofile=div_coverage.txt -covermode=count ./div/
-
+  - go tool cover -func=div_coverage.txt
 
 
 after_success:
