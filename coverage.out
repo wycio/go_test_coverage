@@ -1,2 +1,3 @@
-mode: count
+mode: set
 github.com/wycio/go_test_coverage/add.go:3.24,5.2 1 1
+github.com/wycio/go_test_coverage/add.go:7.29,9.2 1 0
