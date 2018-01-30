@@ -6,10 +6,6 @@ go:
 before_install:
   - go get -t -v ./...
 script:
-  - go test -v -race -coverprofile cover.out add/
-  - go tool cover -func=cover.out
-  - go test -v -race -coverprofile cover.out div/
-  - go tool cover -func=cover.out
   - go test -race -coverprofile=coverage.txt -covermode=count
 
 after_success:
