@@ -5,4 +5,7 @@ go:
 
 script:
   - go tool cover -func=coverage.out
-  - go tool cover -html=coverage.out
+  - go test -race -coverprofile=coverage.txt -covermode=count
+
+after_success:
+  - bash <(curl -s https://codecov.io/bash) -t c480f816-9c63-403f-9da5-316ba6b13a6b
