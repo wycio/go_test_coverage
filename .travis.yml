@@ -3,8 +3,11 @@ language: go
 go:
   - 1.7.4
 
+
+before_install:
+  - go get -t -v ./...
+
 script:
-  - go tool cover -func=coverage.out
   - go test -race -coverprofile=coverage.txt -covermode=count
 
 after_success:
