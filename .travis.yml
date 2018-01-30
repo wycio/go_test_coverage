@@ -6,7 +6,10 @@ go:
 before_install:
   - go get -t -v ./...
 script:
-  - go test -race -coverprofile=coverage.txt -covermode=count
+  - go test -v -race -coverprofile=coverage.txt -covermode=count add/
+  - go test -v -race -coverprofile=coverage.txt -covermode=count div/
+
+
 
 after_success:
   - bash <(curl -s https://codecov.io/bash) -t c480f816-9c63-403f-9da5-316ba6b13a6b
